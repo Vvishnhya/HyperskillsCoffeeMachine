@@ -2,8 +2,8 @@ package machine;
 
 import java.util.Scanner;
 
-public class CoffeeMachine {
-    public static void main(String[] args) {
+public class CoffeeMachineCoffeeMaker {
+    public static void calculateCoffeIngradients() {
         int numberOfCoffeeCupsToProduce = 0;
         //        200 ml of water, 50 ml of milk, and 15 g of coffee beans.
         int ingradientsWater = 200;
