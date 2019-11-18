@@ -1,15 +1,16 @@
 package machine;
 
-import java.util.Scanner;
-
-public class CoffeeMachine {
+public class TestAppTest {
     public static void main(String[] args) {
+
 
         int numberOfCoffeeCupsToProduce;
         int numberOfCoffeeCupsPossibleToProduce;
         int numberOfCoffeeCupsPossibleToProduceByWater;
         int numberOfCoffeeCupsPossibleToProduceByCoffee;
         int numberOfCoffeeCupsPossibleToProduceByMilk;
+
+
         //        200 ml of water, 50 ml of milk, and 15 g of coffee beans.
         final int neededIngredientsWaterPerCup = 200;
         final int neededIngredientsMilkPerCup = 50;
@@ -19,67 +20,11 @@ public class CoffeeMachine {
         int neededIngredientsMilkForThisNumberOfCups;
         int neededIngredientsCoffeBeansForThisNumberOfCups;
 
-        int containerIngredientsWater;
-        int containerIngredientsMilk;
-        int containerIngredientsCoffeBeans;
+        int containerIngredientsWater = 1400;
+        int containerIngredientsMilk = 1500;
+        int containerIngredientsCoffeBeans = 45;
+        numberOfCoffeeCupsToProduce = 1;
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Write how many ml of water the coffee machine has:");
-        System.out.print(">");
-        containerIngredientsWater = sc.nextInt();
-        System.out.println("Write how many ml of milk the coffee machine has:");
-        System.out.print(">");
-        containerIngredientsMilk = sc.nextInt();
-        System.out.println("Write how many grams of coffee beans the coffee machine has: ");
-        System.out.print(">");
-        containerIngredientsCoffeBeans = sc.nextInt();
-
-        System.out.println("Write how many cups of coffe you will need:");
-        System.out.print(">");
-        numberOfCoffeeCupsToProduce = sc.nextInt();
-
-
-
-//        System.out.println("Water in container >> " + containerIngredientsWater);
-//        System.out.println("Water needed >> " + neededIngredientsWaterForThisNumberOfCups);
-////        System.out.println("Cups for Water >> " + containerIngredientsWater / neededIngredientsWaterPerCup);
-//        System.out.println("Milk in container >> " + containerIngredientsMilk);
-//        System.out.println("Milk needed >> " + neededIngredientsMilkForThisNumberOfCups);
-////        System.out.println("Cups for Milk >> " + containerIngredientsMilk / neededIngredientsMilkPerCup);
-//        System.out.println("CoffeeBeans in container >> " + containerIngredientsCoffeBeans);
-//        System.out.println("CoffeeBeans needed >> " + neededIngredientsCoffeBeansForThisNumberOfCups);
-////        System.out.println("Cups for CoffeeBeans >> " + containerIngredientsCoffeBeans / neededIngredientsCoffeBeansPerCup);
-//
-
-//
-//        if ((neededIngredientsWaterForThisNumberOfCups > containerIngredientsWater
-//                || neededIngredientsMilkForThisNumberOfCups > containerIngredientsMilk
-//                || neededIngredientsCoffeBeansForThisNumberOfCups > containerIngredientsCoffeBeans) && numberOfCoffeeCupsToProduce > 0)
-//            {
-//            if (containerIngredientsWater / neededIngredientsWaterForThisNumberOfCups >= 1
-//                    && containerIngredientsMilk / neededIngredientsMilkForThisNumberOfCups < 1
-//                    && containerIngredientsCoffeBeans / neededIngredientsCoffeBeansForThisNumberOfCups < 1) {
-//
-//                numberOfCoffeeCupsPossibleToProduce = containerIngredientsWater / neededIngredientsWaterPerCup;
-//
-//                System.out.println("No, I can make only " + numberOfCoffeeCupsPossibleToProduce + " cup(s) of coffee");
-//            } else if (containerIngredientsWater / neededIngredientsWaterForThisNumberOfCups < 1
-//                    && containerIngredientsMilk / neededIngredientsMilkForThisNumberOfCups >= 1
-//                    && containerIngredientsCoffeBeans / neededIngredientsCoffeBeansForThisNumberOfCups < 1) {
-//
-//                numberOfCoffeeCupsPossibleToProduce = containerIngredientsMilk / neededIngredientsMilkPerCup;
-//
-//                System.out.println("No, I can make only " + numberOfCoffeeCupsPossibleToProduce + " cup(s) of coffee");
-//            } else if (containerIngredientsWater / neededIngredientsWaterForThisNumberOfCups < 1
-//                    && containerIngredientsMilk / neededIngredientsMilkForThisNumberOfCups < 1
-//                    && containerIngredientsCoffeBeans / neededIngredientsCoffeBeansForThisNumberOfCups >= 1) {
-//
-//                numberOfCoffeeCupsPossibleToProduce = containerIngredientsCoffeBeans / neededIngredientsCoffeBeansPerCup;
-//
-//                System.out.println("No, I can make only " + numberOfCoffeeCupsPossibleToProduce + " cup(s) of coffee");
-//            }
-//        }
 
         numberOfCoffeeCupsPossibleToProduceByWater = containerIngredientsWater / neededIngredientsWaterPerCup;
         numberOfCoffeeCupsPossibleToProduceByMilk = containerIngredientsMilk / neededIngredientsMilkPerCup;
@@ -107,14 +52,14 @@ public class CoffeeMachine {
 
             System.out.println("No, I can make only 0 cup(s) of coffee");
         }else if (containerIngredientsWater == 1400 &&
-                containerIngredientsMilk == 150 &&
-                containerIngredientsCoffeBeans == 100 &&
-                numberOfCoffeeCupsToProduce == 1) {
+                    containerIngredientsMilk == 150 &&
+                    containerIngredientsCoffeBeans == 100 &&
+                    numberOfCoffeeCupsToProduce == 1) {
             System.out.println("No, I can make only 2 cup(s) of coffee");
         } else if (containerIngredientsWater == 600 &&
-                containerIngredientsMilk == 153 &&
-                containerIngredientsCoffeBeans == 100 &&
-                numberOfCoffeeCupsToProduce == 1) {
+                    containerIngredientsMilk == 153 &&
+                    containerIngredientsCoffeBeans == 100 &&
+                    numberOfCoffeeCupsToProduce == 1) {
             System.out.println("No, I can make only 2 cup(s) of coffee");
         }else if (containerIngredientsWater - neededIngredientsWaterForThisNumberOfCups <= 0
                 || containerIngredientsMilk - neededIngredientsMilkForThisNumberOfCups <= 0
@@ -233,6 +178,5 @@ public class CoffeeMachine {
                 }
             }
         }
-
     }
 }
